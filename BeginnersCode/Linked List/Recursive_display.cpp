@@ -1,6 +1,3 @@
-//creating and displaying a Linked List
-
-#include<iostream>
 using namespace std;
 
 struct node
@@ -28,21 +25,20 @@ void create(int A[],int n)
   }
 }
 
-void display(struct node *p)
+void rdisplay(struct node *p)
 {
-  while(p!=NULL)
+  if(p!=NULL)
   {
-    cout<<p->data;
-    p=p->next<<" ";
+    cout<<p->data<<" ";
+    rdisplay(p->next);
   }
 }
-
 
 int main()
 {
   int A[] = {3,5,7,10,15};
   create(A,5);
 
-  display(first);
+  rdisplay(first);
   return 0;
 }
