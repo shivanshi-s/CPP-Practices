@@ -1,22 +1,20 @@
-//creating and displaying a Linked List
-
 #include<iostream>
 using namespace std;
 
 struct node
 {
   int data;
-  struct node *next;  //self refrencial structure
+  struct node *next;
 }*first;
 
 void create(int A[],int n)
 {
   int i;
   struct node *temp, *last;
-  first = new node;   //new node created
-  first->data = A[0];  //first node given 0 index of array
-  first->next= NULL;    //next is null right now
-  last = first;         //last is first, list is empty right now
+  first = new node;
+  first->data = A[0];
+  first->next= NULL;
+  last = first;
 
   for(i=1;i<n;i++)
   {
@@ -28,13 +26,14 @@ void create(int A[],int n)
   }
 }
 
-void display(struct node *p)
-{
+void add(struct node *p)
+{ int sum = 0;
   while(p!=NULL)
   {
-    cout<<p->data<<" ";
+    sum = sum + p->data;
     p=p->next;
   }
+  cout<<"sum of the data is : "<<sum;
 }
 
 
@@ -43,6 +42,7 @@ int main()
   int A[] = {3,5,7,10,15};
   create(A,5);
 
-  display(first);
+ add(first);
+ // cout<<x;
   return 0;
 }
