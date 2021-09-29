@@ -1,8 +1,8 @@
 /*
-C++ provides a nice alternative data type to manipulate strings, and the data type is conveniently called string. Some of its widely used features are the following:
-
+C++ provides a nice alternative data type to manipulate strings, and
+the data type is conveniently called string. Some of its widely used
+features are the following:
 Declaration:
-
 string a = "abc";
 Size:
 
