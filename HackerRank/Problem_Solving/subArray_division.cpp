@@ -58,7 +58,8 @@ int birthday(vector<int> s, int d, int m) {
             sum += s[j];
         }
         if ( sum == d)
-            count++;
+          {  count++;}
+          sum = 0;
     }
     return count;
 }
